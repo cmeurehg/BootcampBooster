@@ -1,7 +1,10 @@
-require("dotenv").config();
+//require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
+var sequelize = require("sequelize");
+var path = require("path");
+var mysql = require("mysql");
 
 var db = require("./models");
 
