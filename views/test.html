@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"></link>
+    <!--JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Firebase Script -->
+   
+    <title>BootcampBooster</title>
+ </head>
+
+
+
+<body>
+
+  <div class="container">
+<!-- Jumbotron -->
+    <div class="jumbotron" style=color:white>
+      <h1 class="text-center" style=color:red>BootcampBooster</h1>
+    </div>
+
+    <div class="row">
+    <!-- Train Administrator information input-->
+      <div class="col-lg-3">
+        <div class="card card-default">
+          <div class="card-heading">
+            <h4 class="card-title" style=color:red;text-align:center>Enter & Modify Information</h4>
+          </div>
+          <div class="card-body">
+
+     <!-- Form to input train information -->
+
+            <form role="form">
+              
+              <div class="form-group row">
+                <label for="destination">Week Number</label>
+                <input class="form-control" id="destination" type="text">
+              </div>
+              <div class="form-group row">
+                <label for="first-departure">GitLab Link</label>
+                <input class="form-control" id="first-departure" type="text">
+              </div>
+              <div class="form-group row">
+                <label for="frequency">Skill Reference</label>
+                <input class="form-control" id="frequency" type="text">
+              </div>
+              <button class="btn btn-primary" id="add-train" type="submit">Submit</button>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Information Display -->
+      <div class="col-lg-9">
+        <div class="card card-default">
+          <div class="card-heading">
+            <h4 class="card-title" style=color:red;text-align:center>Display Information</h4>
+          </div>
+          <div class="card-body" id="train-info-title">
+            <div class="card-body">
+                <table class="table table-hover" id="train-info">
+                  <thead>
+                    <tr>
+                      <th>Week Number</th>
+                      <th>Skill Reference</th>
+                      <th>GitLab Link</th>
+                    
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+
+
+  
+
+<!--Linking to js file-->
+<script src=".js"></script>
+
+</body>
+
+</html>
+
