@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = (sequelize, DataTypes) => {
-  const Skill = sequelize.define('skill', {
+  const Week = sequelize.define('week', {
     id: {
       type: DataTypes.UUID,
       primaryKey: true,
@@ -13,9 +13,15 @@ module.exports = (sequelize, DataTypes) => {
       required: true
     },
     
-    week_id: {
-      type: DataTypes.UUID,
-      allowNull: false
+    gitlab_link: {
+        type: DataTypes.INTEGER,
+        required: true
+    },
+
+    role: {
+      type: DataTypes.ENUM,
+      values: ['user', 'admin', 'disabled']
+
     },
     
     created_at: {
@@ -29,5 +35,5 @@ module.exports = (sequelize, DataTypes) => {
     paranoid: true,
     underscored: true
   });
-  return Skill;
+  return Week;
 };
