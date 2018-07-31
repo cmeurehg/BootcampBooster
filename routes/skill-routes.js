@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (app, db) => {
-  // GET all skills
+  
   app.get('/skills', (req, res) => {
     db.skill.findAll()
       .then(skills => {
@@ -9,7 +9,6 @@ module.exports = (app, db) => {
       });
   });
 
-  // GET one  by id
   app.get('/skill/:id', (req, res) => {
     const id = req.params.id;
     db.skills.find({
@@ -20,7 +19,6 @@ module.exports = (app, db) => {
       });
   });
 
-  // POST single skill
   app.post('/skill', (req, res) => {
     console.log(' :) ', req.body)
     const name = req.body.name;
@@ -36,7 +34,6 @@ module.exports = (app, db) => {
     });
   });
 
-  // PATCH single skill
   app.patch('/skill/:id', (req, res) => {
     const id = req.params.id;
     const updates = req.body.updates;
