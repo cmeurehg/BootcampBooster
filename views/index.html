@@ -320,25 +320,25 @@
 							<form action="#" id="register_form" class="register_form">
 								<div class="row register_row">
 									<div class="col-lg-6 register_col">
-										<input type="number" class="form_input" placeholder="Week_Number" required="required">
+										<input type="number" class="form_input" id="weekNumber" placeholder="Week_Number" required="required">
 									</div>
 									<div class="col-lg-6 register_col">
-										<input type="url" class="form_input" placeholder="GitLab Link" required="required">
+										<input type="url" class="form_input" id="gitlabLink" placeholder="GitLab Link" required="required">
 									</div>
 									<div class="col-lg-6 register_col">
-										<input type="text" class="form_input" placeholder="Skill Reference">
+										<input type="text" class="form_input" id="skill" placeholder="Skill Reference">
 									</div>
-									<div class="col">
-										<!-- style for toggle in in regular.css-->
+									<!-- <div class="col">
+										
 											<label class="switch">
 													<input type="checkbox" checked>
 													<span class="slider round"></span>
 													Move toggle left if this skill has not been reviewed
 												 </label>										
 												</div>
-									<div class="col">
-											<button type="submit" class="form_button trans_200">submit</button>
-										</div>
+									<div class="col"> -->
+											<!-- <button type="submit" class="form_button trans_200">submit</button>
+										</div> -->
 
 									<div class="col-lg-6 register_col">
 										<input type="text" class="form_input" placeholder="Website Reference">
@@ -610,6 +610,98 @@
 							<script src="../public/js/custom.js"></script>
                             <script src="../public/js/login.js"></script>
                             <script src="../public/js/regular.js"></script>
-</body>
+							<script type="text/javascript">
+								function test_calls() {
+										// Send the PUT request.
+										$.ajax("/api//" + id, {
+											type: "PUT",
+											data: {
+												name: 'john',
+												week_id: '2'
+											}
+										}).then(
+											function (data) {
+												console.log(data);
+											}
+										);
+									}
+
+									$(function () {
+										$("").on("click", function (event) {
+											var id = $(this).data("id");
+
+											// Send the PUT request.
+											$.ajax("/api//" + id, {
+												type: "PUT",
+												data: 
+    												}).then(
+												function () {
+													console.log();
+
+												}
+												);
+										});
+
+										$("").on("submit", function (event) {
+
+											event.preventDefault();
+
+											var week = $("#weekNumber").val().trim();
+											var activity = $("#activiy").val().trim();
+											var link = $("#gitlabLink").val().trim();
+											var skillReference = $("#skill").val().trim();
+
+											var data = {
+												weekNumber: week,
+												activityNumber: activity,
+												gitlabLink: link,
+												skillReference: skillReference
+											}
+
+
+											$.ajax("/api/", {
+												type: "POST",
+												dataType: 'json',
+												data: data
+											}).then(
+												function () {
+													console.log("created new entry");
+													// location.reload();
+													console.log(data)
+												}
+											);
+										});
+
+										$(".delete-cat").on("click", function (event) {
+											var id = $(this).data("id");
+
+											// Send the DELETE request.
+											$.ajax("/api/cats/" + id, {
+												type: "DELETE"
+											}).then(
+												function () {
+													console.log("deleted cat", id);
+													// Reload the page to get the updated list
+													location.reload();
+												}
+											);
+										});
+									});
+									function allowDrop(ev) {
+										ev.preventDefault();
+									}
+
+									function drag(ev) {
+										ev.dataTransfer.setData("text", ev.target.id);
+									}
+
+									function drop(ev) {
+										ev.preventDefault();
+										var data = ev.dataTransfer.getData("text");
+										ev.target.appendChild(document.getElementById(data));
+									}
+
+							</script>
+						</body>
 
 </html>
