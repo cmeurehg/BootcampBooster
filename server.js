@@ -1,5 +1,9 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var db = require('./models');
+
+var router = require('./routes');
+
 
 var PORT = process.env.PORT || 8080;
 
@@ -15,18 +19,27 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Set Handlebars.
-var exphbs = require("express-handlebars");
+//var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+//app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+//app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/skillsController.js");
+//var routes = require("./controllers/skillsController.js");
 
-app.use(routes);
+//app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
+// app.listen(PORT, function() {
+//   // Log (server-side) when our server has started
+//   console.log("Server listening on: http://localhost:" + PORT);
+// });
+
+router(app, db);
+
+//drop and resync with { force: true }
+db.sequelize.sync({force: true}).then(() => {
+  app.listen(PORT, () => {
+    console.log('Express listening on port:', PORT);
+  });
 });
