@@ -35,5 +35,6 @@ module.exports = (sequelize, DataTypes) => {
     paranoid: true,
     underscored: true
   });
+  //TODO::Week hasMany Activities
   return Week;
 };

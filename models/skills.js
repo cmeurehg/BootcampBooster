@@ -22,12 +22,15 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
       allowNull: false
     },
-    
+    reviewed: {
+      type: DataTypes.BOOLEAN
+    },
     updated_at:  DataTypes.DATE,
     deleted_at: DataTypes.DATE
   }, {
     paranoid: true,
     underscored: true
   });
+  //TODO::Skills belongTo Activities
   return Skill;
 };
