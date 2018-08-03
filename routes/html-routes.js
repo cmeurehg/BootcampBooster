@@ -1,10 +1,14 @@
 var path = require("path");
+var express = require('express')
+var app = express();
 
-module.exports = function(app) {
+
+module.exports = function() {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/partials/test.html"));
+    // res.sendFile(path.join(__dirname, "/public/views/text.html"));
+    res.send('<h1>it works !</h1>')
   });
 
 //   // cms route loads cms.html
