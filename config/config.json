@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
+    "password": "M0v1ng0n#",
     "database": "bootcampBoosterDB",
     "host": "localhost",
     "dialect": "mysql"

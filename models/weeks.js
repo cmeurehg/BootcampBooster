@@ -1,11 +1,9 @@
-'use strict'
-
 module.exports = (sequelize, DataTypes) => {
-  const Week = sequelize.define('week', {
+  const weeks = sequelize.define('weeks', {
     id: {
-      type: DataTypes.UUID,
+      type: DataTypes.INTEGER,
       primaryKey: true,
-      defaultValue: DataTypes.UUIDV4
+      
     },
     
     name: {
@@ -14,26 +12,21 @@ module.exports = (sequelize, DataTypes) => {
     },
     
     gitlab_link: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         required: true
-    },
+    }
 
-    role: {
-      type: DataTypes.ENUM,
-      values: ['user', 'admin', 'disabled']
-
-    },
-    
-    created_at: {
-      type: DataTypes.DATE,
-      allowNull: false
-    },
-    
-    updated_at:  DataTypes.DATE,
-    deleted_at: DataTypes.DATE
-  }, {
-    paranoid: true,
-    underscored: true
   });
-  return Week;
+
+  weeks.associate = function(models) {
+  
+    weeks.hasMany(models.skills, {
+      onDelete: "cascade"
+
+    });
+  
+  };
+
+  return weeks;
+
 };

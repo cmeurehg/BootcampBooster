@@ -2,7 +2,8 @@
 
 const routes = [
   require('./week-routes'),
-  require('./skill-routes')
+  require('./skill-routes'),
+  require('./html-routes')
 ];
 // Add access to the app and db objects to each route
 module.exports = function router(app, db) {
