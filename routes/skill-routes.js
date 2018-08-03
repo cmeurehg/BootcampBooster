@@ -3,7 +3,7 @@
 module.exports = (app, db) => {
   
   app.get('/skills', (req, res) => {
-    db.skill.findAll()
+    db.skills.findAll()
       .then(skills => {
         res.json(skills);
       });
@@ -19,19 +19,22 @@ module.exports = (app, db) => {
       });
   });
 
-  app.post('/skill', (req, res) => {
-    console.log(' :) ', req.body)
+  app.post('api/skill', (req, res) => {
+    // console.log(req.body);
+    console.log(req.body.name)
+    console.log(req.body.week_id)
+
     const name = req.body.name;
     const week_id = req.body.week_id; //AJAX call from the front, grabbing data from the request.body  make the call....
-    const type = req.body.type;
-    db.skill.create({
+ 
+    db.skills.create({
       name: name,
-      week_id: week_id,
-      type: type
+      week_id: week_id
     })
       .then(newSkill => {
       res.json(newSkill);
     });
+
   });
 
   app.patch('/skill/:id', (req, res) => {
