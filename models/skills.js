@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     
     skills.associate = function(models) {
    
-      skills.belongsTo(models.weeks, {
+      skills.belongsTo(models.activity, {
         foreignKey: {
           allowNull: false
         }

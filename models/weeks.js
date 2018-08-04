@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
 
   weeks.associate = function(models) {
   
-    weeks.hasMany(models.skills, {
+    weeks.hasMany(models.activity, {
       onDelete: "cascade"
 
     });

@@ -319,7 +319,7 @@
 						<div class="register_form_title">Add Skill to your Library</div>
 						<form action="#" id="register_form" class="register_form">
 							<div class="row register_row">
-								<div class="col-lg-6 register_col">
+								<div class="col-lg-6 register_col"id="name">
 									<input type="number" class="form_input" id="weekNumber" placeholder="Week_Number" required="required">
 								</div>
 								<div class="col-lg-6 register_col">
@@ -456,63 +456,37 @@
 								<div class="blog_left">
 									<div class="blog_title">Skill Library</div>
 									<div class="blog_text">
-										<p>Show reviewed in one color
-										</p>
-									</div>
-									<div class="blog_categories">
-										<div class="row categories_row">
-
-											<!-- Category -->
-											<div class="col-md-4 blog_category_col">
-												<a href="blog.html">
-													<div class="blog_category">
-														<div class="blog_category_image">
-															<img src="images/blog_1.jpg" alt="">
-														</div>
-														<div class="blog_category_title">mysql</div>
+										
+										<form>
+											<div class="typeahead__container">
+												<div class="typeahead__field">
+													<div class="typeahead__query">
+														<input class="js-typeahead"
+															   name="q"
+															   type="search"
+															   autocomplete="off">
 													</div>
-												</a>
-											</div>
-
-											<!-- Category -->
-											<div class="col-md-4 blog_category_col">
-												<a href="blog.html">
-													<div class="blog_category">
-														<div class="blog_category_image">
-															<img src="images/blog_2.jpg" alt="">
-														</div>
-														<div class="blog_category_title">sequelize</div>
+													<div class="typeahead__button">
+										 
+														<button type="submit">
+															<span class="typeahead__search-icon">ADD</span>
+														</button>
 													</div>
-												</a>
-											</div>
-
-											<!-- Category -->
-											<div class="col-md-4 blog_category_col">
-												<a href="blog.html">
-													<div class="blog_category">
-														<div class="blog_category_image">
-															<img src="images/blog_3.jpg" alt="">
 														</div>
-														<div class="blog_category_title">insert into</div>
+														
 													</div>
-												</a>
-											</div>
-
-											<!-- Category -->
-											<div class="col-md-4 blog_category_col">
-												<a href="blog.html">
-													<div class="blog_category">
-														<div class="blog_category_image">
-															<img src="images/blog_4.jpg" alt="">
-														</div>
-														<div class="blog_category_title">orm</div>
-													</div>
-												</a>
-											</div>
+										</form>
 
 
-
+										
+											<!-- <div id="msg"></div>
+											<div id="btns-topics"></div>
+											<div id="list"></div> -->
+									
 										</div>
+										<div class="blog_categories">
+											<div class="row categories_row">	
+									</div>
 									</div>
 								</div>
 							</div>
@@ -601,15 +575,38 @@
 								</div>
 							</footer>
 						
-
-		<script src="../public/js/jquery-3.2.1.min.js"></script>
-		<script src="../public/styles/bootstrap4/popper.js"></script>
-		<script src="../public/styles/bootstrap4/bootstrap.min.js"></script>
-		<script src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-		<script src="../plugins/easing/easing.js"></script>
-		<script src="../public/js/custom.js"></script>
-		<script src="../public/js/login.js"></script>
-		<script src="../public/js/regular.js"></script>
+							<script type="text/javascript" src="../public/js/jquery-3.2.1.min.js"></script>
+							<script type="text/javascript" src="../vendor/jquery.typeahead.min.js"></script>
+							<script type="text/javascript" src="../public/styles/bootstrap4/popper.js"></script>
+							<script type="text/javascript" src="../public/styles/bootstrap4/bootstrap.min.js"></script>
+							<script type="text/javascript" src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+							<script type="text/javascript" src="../plugins/easing/easing.js"></script>
+							<script type="text/javascript" src="../public/js/custom.js"></script>
+                            <script type="text/javascript" src="../public/js/login.js"></script>
+							<script type="text/javascript" src="../public/js/regular.js"></script>
+							<script type="text/javascript" >
+									$.typeahead({
+									input: '.js-typeahead',
+									order: "desc",
+									source: {
+										data: ["handlebars", "createconnection", "app", "form", "listening", "localhost","module","mysql","orm","params","port","query","require","response","root","route","server","update","urlencoded"]
+									},
+									callback: {
+										onInit: function (node) {
+											console.log('Typeahead Initiated on ' + node.selector);
+										}
+									}
+								});
+							
+								
+								
+								
+								</script>
+		
+		
+		
+		
+		
 		<script type="text/javascript">
 			function test_calls() {
 					// Send the PUT request.
@@ -658,7 +655,7 @@
 							skillReference: skillReference
 						}
 						console.log(data);
-
+					
 				// 		$.ajax("/api/", {
 				// 			type: "POST",
 				// 			dataType: 'json',
