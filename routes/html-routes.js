@@ -7,8 +7,8 @@ module.exports = function() {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    // res.sendFile(path.join(__dirname, "/public/views/text.html"));
-    res.send('<h1>it works !</h1>')
+    res.sendFile(path.join(__dirname, "/views/index.html"));
+    //res.send('<h1>it works !</h1>')
   });
 
 //   // cms route loads cms.html
