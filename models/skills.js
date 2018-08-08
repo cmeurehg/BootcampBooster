@@ -1,21 +1,27 @@
-module.exports = function (sequelize, DataTypes) {
-  var Skills = sequelize.define("Skills", {
-    weekNumber: {
-      type: DataTypes.INTEGER,
+module.exports = (sequelize, DataTypes) => {
+  const skills = sequelize.define('skills', {
+    id: {
+      type: DataTypes.UUID,
+      primaryKey: true,
       allowNull: false
     },
-    gitlabLink: {
+    
+    name: {
       type: DataTypes.STRING,
-      allowNull: false
-    },
-    skill: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    webReference: {
-      type: DataTypes.STRING,
-      allowNull: false
+      required: true
     }
+
   });
-  return Skills;
+    
+    skills.associate = function(models) {
+   
+      skills.belongsTo(models.activity, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
+    };
+
+  return skills;
+
 };
