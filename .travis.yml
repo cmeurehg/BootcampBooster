@@ -1,0 +1,32 @@
+# language: node_js
+# node_js: "8"
+# branches:
+#   only:
+#   - master
+# cache:
+#   directories:
+#     - node_modules
+# before_install:
+#   - mysql -e 'CREATE DATABASE testdb;'
+
+{
+  "os": "linux",
+  "dist": "trusty",
+  "cache": {
+    "directories": [
+      "node_modules"
+    ]
+  },
+  "group": "stable",
+  ".result": "configured",
+  "node_js": "8",
+  "branches": {
+    "only": [
+      "master"
+    ]
+  },
+  "language": "node_js",
+  "before_install": [
+    "mysql -e 'CREATE DATABASE testdb;'"
+  ]
+}
