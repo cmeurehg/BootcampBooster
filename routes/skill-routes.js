@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use strict';
 
 module.exports = (app, db) => {
@@ -75,4 +73,3 @@ module.exports = (app, db) => {
   });  
 
 };
->>>>>>> ce3f05bb3ff083801bde21bd8cfecea738703e11
