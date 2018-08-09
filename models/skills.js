@@ -1,17 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 module.exports = (sequelize, DataTypes) => {
   const skills = sequelize.define('skills', {
     id: {
       type: DataTypes.UUID,
       primaryKey: true,
-=======
+    },
+  },
 module.exports = function (sequelize, DataTypes) {
   var Skills = sequelize.define("Skills", {
     weekNumber: {
       type: DataTypes.INTEGER,
->>>>>>> dev
       allowNull: false
     },
     gitlabLink: {
@@ -28,5 +25,5 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
   return Skills;
+  });
 };
->>>>>>> ce3f05bb3ff083801bde21bd8cfecea738703e11
