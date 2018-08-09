@@ -1,8 +1,13 @@
-module.exports = (sequelize, DataTypes) => {
-  const skills = sequelize.define('skills', {
-   
+ module.exports = function (sequelize, DataTypes) {
+  var skills = sequelize.define("skills", {
+   id: {
+      type: DataTypes.INTEGER,
+       primaryKey: true
+   }
+  },
     weekNumber: {
       type: DataTypes.INTEGER,
+
 
       allowNull: false
     },
@@ -19,6 +24,8 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     }
   });
+ };
   return skills;
+ 
 };
 

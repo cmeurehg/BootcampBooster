@@ -1,178 +1,126 @@
+<!--page to display database/blog.html page -->
 <!DOCTYPE html>
-<html lang="en">
+	<html lang="en">
 
-<head>
-	<title>Bootcamp Booster</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Lingua project">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-	<link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-	<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-	<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/animate.css">
-	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
-	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/index.css">
-</head>
+	<head>
+		<title id="title"> Bootcamp Booster</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Lingua project">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../public/styles/bootstrap4/bootstrap.min.css">
+		<link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+		<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+		<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/animate.css">
+		<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+		<link rel="stylesheet" type="text/css" href="../public/styles/responsive.css">
+		<link rel="stylesheet" type="text/css" href="../public/styles/bootstrap4/index.css">
+		<!--jquery plugin ?for what function::typahead?-->
+		<script src="https://code.jquery.com/jquery.js"></script>
 
-<body>
+	</head>
 
-	<div class="super_container">
+	<body>
 
-		<!-- Header -->
+		<div class="super_container">
 
-		<header class="header">
+			<!-- Header -->
 
-			<!-- Top Bar
-		<div class="top_bar">
-			<div class="top_bar_container">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
-									
-								<div class="top_bar_right ml-auto">
-
-										Language 
-									<div class="top_bar_lang">
-										<span class="top_bar_title">site language:</span>
-										<ul class="lang_list">
-											<li class="hassubs">
-												<a href="#">English
-													<i class="fa fa-angle-down" aria-hidden="true"></i>
-												</a>
-												<ul>
-													<li>
-														<a href="#">Ukrainian</a>
-													</li>
-													<li>
-														<a href="#">Japanese</a>
-													</li>
-													<li>
-														<a href="#">Lithuanian</a>
-													</li>
-													<li>
-														<a href="#">Swedish</a>
-													</li>
-													<li>
-														<a href="#">Italian</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</div>-->
-
-			<!-- Social
-									<div class="top_bar_social">
-										<span class="top_bar_title social_title">follow us</span>
-										<ul>
-											<li>
-												<a href="#">
-													<i class="fa fa-facebook" aria-hidden="true"></i>
-												</a>
-											</li>
-											<li>
-												<a href="#">
-													<i class="fa fa-instagram" aria-hidden="true"></i>
-												</a>
-											</li>
-											<li>
-												<a href="#">
-													<i class="fa fa-twitter" aria-hidden="true"></i>
-												</a>
-											</li>
-										</ul>
-									</div> 
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-
-			<!-- Header Content -->
-			<div class="header_container">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							<div class="header_content d-flex flex-row align-items-center justify-content-start">
-								<div class="logo_container mr-auto">
-									<a href="#">
-										<div class="logo_text">Bootcamp Booster</div>
-									</a>
-								</div>
-								<!--<nav class="main_nav_contaner">
-								<ul class="main_nav">
-									<li class="active">
-										<a href="index.html">Home-login</a>
-									</li>
-									<li>
-										<a href="courses.html">Skill Database</a>
-									</li>
-									<li>
-										<a href="instructors.html">Developers</a>
-									</li>
+			<header class="header">
 
 
-								</ul>
-							</nav>-->
-								<div class="header_content_right ml-auto text-right">
-									<div class="header_search">
-										<div class="search_form_container">
-											<form action="#" id="search_form" class="search_form trans_400">
-												<input type="search" class="header_search_input trans_400" placeholder="Search for Skill" required="required">
-												<div class="search_button">
-													<i class="fa fa-search" aria-hidden="true"></i>
-												</div>
-											</form>
-										</div>
+				<!-- Header Content -->
+				<div class="header_container">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="header_content d-flex flex-row align-items-center justify-content-start">
+									<div class="logo_container mr-auto">
+										<a href="#">
+											<div class="logo_text">Bootcamp Booster</div>
+										</a>
 									</div>
+									<nav class="main_nav_contaner">
+										<ul class="main_nav">
+											<li>
+												<a href="#">Home</a>
+											</li>
+											<li>
+												<div class="dropdown">
+													<button class="dropbtn" id="dropbtn">Skill Reference
+														<i class="fa fa-caret-down"></i>
+													</button>
+													<div class="dropdown-content">
+														<a href="#personalskill">Personal database</a>
+														<a href="#searchtools">Public search tools</a>
+													</div>
+												</div>
+											</li>
+											<li>
+												<a href="#developers">Developers</a>
+											</li>
+
+
+										</ul>
+									</nav>
+									<!--search bar linked to what?data -->
+									<!--<div class="header_content_right ml-auto text-right">
+										<div class="header_search">
+											<div class="search_form_container">
+												<form action="#" id="search_form" class="search_form trans_400">
+													<input type="search" class="header_search_input trans_400" placeholder="Search for Skill" required="required">
+													<div class="search_button">
+														<i class="fa fa-search" aria-hidden="true"></i>
+													</div>
+												</form>
+											</div>
+										</div> -->
+
+
+
 									<!-- Hamburger -->
-
-
 									<div class="hamburger menu_mm">
 										<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
 									</div>
-									<!-- user login-->
+									
+									<!-- user login
 
-									<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+								<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
-									<div id="id01" class="modal">
+								<div id="id01" class="modal">
 
-										<form class="modal-content animate" action="/action_page.php">
-											<div class="imgcontainer">
-												<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-												<img src="img_avatar2.png" alt="Avatar" class="avatar">
-											</div>
+									<form class="modal-content animate" action="/action_page.php">
+										<div class="imgcontainer">
+											<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+											<img src="img_avatar2.png" alt="Avatar" class="avatar">
+										</div>
 
-											<div class="container">
-												<label for="uname">
-													<b>Username</b>
-												</label>
-												<input type="text" placeholder="Enter Username" name="uname" required>
+										<div class="container">
+											<label for="uname">
+												<b>Username</b>
+											</label>
+											<input type="text" placeholder="Enter Username" name="uname" required>
 
-												<label for="psw">
-													<b>Password</b>
-												</label>
-												<input type="password" placeholder="Enter Password" name="psw" required>
+											<label for="psw">
+												<b>Password</b>
+											</label>
+											<input type="password" placeholder="Enter Password" name="psw" required>
 
-												<button type="submit">Login</button>
-												<label>
-													<input type="checkbox" checked="checked" name="remember"> Remember me
-												</label>
-											</div>
+											<button type="submit">Login</button>
+											<label>
+												<input type="checkbox" checked="checked" name="remember"> Remember me
+											</label>
+										</div>
 
-											<div class="container" style="background-color:#f1f1f1">
-												<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-												<span class="psw">Forgot
-													<a href="#">password?</a>
-												</span>
-											</div>
-										</form>
-									</div>
+										<div class="container" style="background-color:#f1f1f1">
+											<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+											<span class="psw">Forgot
+												<a href="#">password?</a>
+											</span>
+										</div>
+									</form>
+								</div>-->
 
 
 								</div>
@@ -181,7 +129,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+		</div>
 
 		</header>
 
@@ -205,13 +153,21 @@
 			<nav class="menu_nav">
 				<ul class="menu_mm">
 					<li class="menu_mm">
-						<a href="index.html">Home</a>
+						<a href="#">Home</a>
 					</li>
 					<li class="menu_mm">
-						<a href="courses.html">Skill Database</a>
+						<div class="dropdown">
+							<button class="dropbtn">Skill References
+								<i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+								<a href="#personalskill">Personal database</a>
+								<a href="#searchtools">Public search tools</a>
+							</div>
+						</div>
 					</li>
 					<li class="menu_mm">
-						<a href="instructors.html">Developers</a>
+						<a href="#developers">Developers</a>
 					</li>
 
 				</ul>
@@ -225,22 +181,21 @@
 		<!-- Home -->
 
 		<div class="home">
-			<div class="home_background" style="background-image: url(images/index_background.jpg);"></div>
+			<div class="home_background" style="background-image: url(/Users/user/Practice/BootcampBooster/BootcampBooster/public/assets/img/training-2877134_1920.jpg);"></div>
 			<div class="home_content">
 				<div class="container">
 					<div class="row">
 						<div class="col text-center">
-							<h1 class="home_title">Boost your bootcamp</h1>
+							<br>
 
-
-
+							<h1 class="home_title" id="typetag"></h1>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Language -->
+		<!-- Language 
 
 		<div class="language">
 			<div class="container">
@@ -249,43 +204,43 @@
 						<div class="language_slider_container">
 							<h5>Jump to a (recently viewed) skill</h5>
 
-							<!-- Language Slider -->
+							 Language Slider
 
 							<div class="owl-carousel owl-theme language_slider">
 
-								<!-- Flag -->
+								Flag 
 								<div class="owl-item language_item">
 									<a href="#">
 										<div class="flag">
-											<img src="images/Ukrainian.svg" alt="">
+											<img src="/Users/user/Practice/BootcampBooster/BootcampBooster/public/assets/img/icons8-javascript-50.png" alt="javascript">
 										</div>
 										<div class="lang_name">Skill 1</div>
 									</a>
 								</div>
 
-								<!-- Flag -->
+								 Flag
 								<div class="owl-item language_item">
 									<a href="#">
 										<div class="flag">
-											<img src="images/Japanese.svg" alt="">
+											<img src="/Users/user/Practice/BootcampBooster/BootcampBooster/public/assets/img/icons8-json-32.png" alt="json">
 										</div>
 										<div class="lang_name">Skill 2</div>
 									</a>
 								</div>
-								<!-- Flag -->
+								Flag 
 								<div class="owl-item language_item">
 									<a href="#">
 										<div class="flag">
-											<img src="images/Japanese.svg" alt="">
+											<img src="/Users/user/Practice/BootcampBooster/BootcampBooster/public/assets/img/icons8-module-64.png" alt="module">
 										</div>
 										<div class="lang_name">Skill 3</div>
 									</a>
 								</div>
-								<!-- Flag -->
+								 Flag
 								<div class="owl-item language_item">
 									<a href="#">
 										<div class="flag">
-											<img src="images/Japanese.svg" alt="">
+											<img src="/Users/user/Practice/BootcampBooster/BootcampBooster/public/assets/img/icons8-mysql-logo-filled-50.png" alt="mysql">
 										</div>
 										<div class="lang_name">Skill 4</div>
 									</a>
@@ -304,20 +259,36 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 
 		<!-- Enter skill information -->
 
-		<div class="register">
-			<div class="container">
-				<div class="row">
+		<div class="register" id="personalskill">
 
-					<!-- Register Form -->
+			<div class="row">
+				<div class="col">
+					<h2 class="section_title text-center">Personal Skills Database</h2>
+					<button>click here to go to personal skills</button>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row user_row">
+
+
+					<!-- Register Form
+
 
 					<div class="col-lg-6">
+
 						<div class="register_form_container">
-							<div class="register_form_title">Add Skill to your Library</div>
-							<form action="#" id="register_form" class="register_form">
+							<div class="register_form_title">Add your skills to your database here:</div>
+							<form action="#" id="skill_database" class="register_form">
+									<select class="custom-select" id="category">
+											<option selected value="">All Categories</option>
+											<option value="Reviewed">Reviewed</option>
+											<option value="Not Reviewed">Not Reviewed</option>
+									  
+										  </select>
 								<div class="row register_row">
 									<div class="col-lg-6 register_col" id="name">
 										<input type="number" class="form_input" id="weekNumber" placeholder="Week_Number" required="required">
@@ -328,196 +299,124 @@
 									<div class="col-lg-6 register_col">
 										<input type="text" class="form_input" id="skill" placeholder="Skill Reference">
 									</div>
-									<!-- <div class="col">
-									
-										<label class="switch">
-												<input type="checkbox" checked>
-												<span class="slider round"></span>
-												Move toggle left if this skill has not been reviewed
-												</label>										
-											</div>
-								<div class="col"> -->
-									<!-- <button type="submit" class="form_button trans_200">submit</button>
-									</div> -->
-
 									<div class="col-lg-6 register_col">
-										<input type="text" class="form_input" id='webReference' placeholder="Website Reference">
+										<input type="text" class="form_input" placeholder="Website Reference">
 										<div class="col">
-											<button type="submit" class="form_button trans_200" id="sumbit_btn">submit</button>
+											<button type="submit" class="form_button trans_200">submit</button>
 										</div>
 									</div>
 								</div>
+								
 							</form>
 						</div>
-					</div>
-					<!-- Register Timer -->
+						</div>
+					
+					<br>
+					<br>
 
+				display skill library
 					<div class="col-lg-6">
-						<div class="register_timer_container">
-							<div class="register_timer_title">Time your study session</div>
-							<div class="register_timer_text">
-								<p>Link to Tomato.es </p>
-								<a href="http://www.tomato.es/"></a>
-							</div>
 
+						<div class="register_form_container">
+							<div class="register_form_title">View skills in your database here:</div>
+							<div class="form-group">
+								<select class="custom-select" id="category">
+								  <option selected value="">All Categories</option>
+								  <option value="Reviewed">Reviewed</option>
+								  <option value="Not Reviewed">Not Reviewed</option>
+							
+								</select>
+							  </div>
+							  Consider placing a link to new skill form here...may be redundant
+							<table class="table table-hover" id="database-info">
+								<thead>
+									<tr>
+										<th>Week Number</th>
+										<th>Activity Number</th>
+										<th>Skill Reference</th>
+										<th>GitLab Link</th>
+
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table> 
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- Courses -->
+		</div> -->
+		<!-- Register Timer
 
-		<div class="courses">
+	<div class="col-lg-6">
+			<div class="register_timer_container">
+				<div class="register_timer_title">Time your study session</div>
+				<div class="register_timer_text">
+					<p>Link to Tomato.es </p>
+					<a href="http://www.tomato.es/"></a>
+				</div>
+			
+			</div>
+		</div> -->
+
+
+		<!-- Public Skill Resources-->
+
+		<div class="courses" id="searchtools">
 
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<h2 class="section_title text-center">Display Skill Information</h2>
+						<h2 class="section_title text-center">Public Skills Resources</h2>
 					</div>
 				</div>
-				<div class="row courses_row">
 
-					<!-- Course -->
-					<div class="col-lg-4 course_col">
-						<div class="course">
-							<div class="course_image">
-								<img src="images/course_1.jpg" alt="">
-							</div>
-							<div class="course_body">
-								<div class="course_title">
-									<a href="course.html">Skill Info GitLab</a>
-								</div>
-								<div class="course_info">
-									<ul>
-										<li>
-											<a href="instructors.html">Week #</a>
-										</li>
-										<li>
-											<a href="#">GitLab Link</a>
-										</li>
-									</ul>
-								</div>
-								<div class="course_text">
-									<p>Can we connect the GitLab API to display the search results in here?.</p>
-								</div>
-							</div>
-							<div class="course_footer d-flex flex-row align-items-center justify-content-start">
-								<!-- <div class="course_students"><i class="fa fa-user" aria-hidden="true"></i><span>10</span></div>
-						<div class="course_rating ml-auto"><i class="fa fa-star" aria-hidden="true"></i><span>4,5</span></div>
-						<div class="course_mark course_free trans_200"><a href="#">Free</a></div> -->
-							</div>
-						</div>
+				<!-- Customizable google search -->
+				<gcse:searchbox enableHistory="true" autoCompleteMaxCompletions="5" autoCompleteMatchType="any" refinementStyle="link"></gcse:searchbox>
+				<gcse:searchresults refinementStyle="link"></gcse:searchresults>
+				<p>Programming Video Playlist</p>
+				<div id="player"></div>
+				<div class="row">
+					<div class="col">
+						<h2 class="section_title text-center">Productivity Links</h2>
+						<p class="text-center">Evernote</p>
+						<p class="text-center">GoConqr</p>
+						<p class="text-center">TomatoTimer</p>
 					</div>
-					<!-- Course -->
-					<div class="col-lg-4 course_col">
-						<div class="course">
-							<div class="course_image">
-								<img src="images/course_1.jpg" alt="">
-							</div>
-							<div class="course_body">
-								<div class="course_title">
-									<a href="course.html">Skill Info WWW</a>
-								</div>
-								<div class="course_info">
-									<ul>
-										<li>
-											<a href="instructors.html">Week #</a>
-										</li>
-										<li>
-											<a href="#">GitLab Link</a>
-										</li>
-									</ul>
-								</div>
-								<div class="course_text">
-									<p>Can we place www links here? pulled from a database?</p>
-								</div>
-							</div>
-							<div class="course_footer d-flex flex-row align-items-center justify-content-start">
-								<!-- <div class="course_students"><i class="fa fa-user" aria-hidden="true"></i><span>10</span></div>
-						<div class="course_rating ml-auto"><i class="fa fa-star" aria-hidden="true"></i><span>4,5</span></div>
-						<div class="course_mark course_free trans_200"><a href="#">Free</a></div> -->
-							</div>
-						</div>
-					</div>
-
 				</div>
-			</div>
-		</div>
 
-
-		<!-- skills table display -->
-
-		<div class="blog">
-			<div class="container">
-				<div class="row row-lg-eq-height">
-
-					<!-- Blog Left -->
-					<div class="col-lg-6">
-						<div class="blog_left">
-							<div class="blog_title">Skill Library</div>
-							<div class="blog_text">
-
-								<form>
-									<div class="typeahead__container">
-										<div class="typeahead__field">
-											<div class="typeahead__query">
-												<input class="js-typeahead" name="q" type="search" autocomplete="off">
-											</div>
-											<div class="typeahead__button">
-
-												<button type="submit">
-													<span class="typeahead__search-icon">ADD</span>
-												</button>
-											</div>
-										</div>
-
-									</div>
-								</form>
-
-
-
-								<!-- <div id="msg"></div>
-											<div id="btns-topics"></div>
-											<div id="list"></div> -->
-
-							</div>
-							<div class="blog_categories">
-								<div class="row categories_row">
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
 			</div>
 		</div>
 
 
 
-		<!-- Footer -->
-
+<!-- Footer -->
 		<footer class="footer">
 			<div class="footer_body">
 				<div class="container">
 					<div class="row">
 
 
-						<!-- Privacy -->
+						<!-- Developers -->
 						<div class="col-lg-2 footer_col clearfix">
 							<div>
-								<div class="footer_title">Privacy & Terms</div>
-								<ul class="footer_list">
+								<div class="footer_title">Developers</div>
+								<ul class="footer_list" id="developers_list">
 									<li>
-										<a href="#">Community Guidelines</a>
+										<!--image is going below hmtl code::<img src="/public/assets/img/github-logo.jpg" alt="developer" width="96" height: "96"> -->
+										<a href="#">Claude</a>
 									</li>
 									<li>
-										<a href="#">Terms</a>
+										<!-- <img src="/public/assets/img/github-logo.jpg" alt="developer" width="96" height: "96"> -->
+										<a href="#">Nadiah</a>
 									</li>
 									<li>
-										<a href="#">Brand Guidelines</a>
+										<!-- <img src="/public/assets/img/github-logo.jpg" alt="developer" width="96" height: "96"> -->
+										<a href="#">Sumeet</a>
 									</li>
 									<li>
-										<a href="#">Privacy</a>
+										<!-- <img src="/public/assets/img/github-logo.jpg" alt="developer" width="96" height: "96"> -->
+										<a href="#">Candice</a>
 									</li>
 								</ul>
 							</div>
@@ -525,7 +424,7 @@
 
 					</div>
 				</div>
-			</div>
+			
 			<div class="copyright">
 				<div class="container">
 					<div class="row">
@@ -542,8 +441,7 @@
 									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 								</div>
 								<div class="cr_right ml-md-auto">
-									<div class="footer_phone">
-										<span class="cr_title">phone:</span>+44 300 303 0266</div>
+								
 									<div class="footer_social">
 										<span class="cr_social_title">follow us</span>
 										<ul>
@@ -570,34 +468,225 @@
 					</div>
 				</div>
 			</div>
+		</div>
 		</footer>
+	</div>
 
-		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="../public/js/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="../vendor/jquery.typeahead.min.js"></script>
-		<script type="text/javascript" src="styles/bootstrap4/popper.js"></script>
-		<script type="text/javascript" src="styles/bootstrap4/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../public/styles/bootstrap4/popper.js"></script>
+		<script type="text/javascript" src="../public/styles/bootstrap4/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 		<script type="text/javascript" src="../plugins/easing/easing.js"></script>
-		<script type="text/javascript" src="js/custom.js"></script>
-		<script type="text/javascript" src="js/login.js"></script>
-		<script type="text/javascript" src="js/regular.js"></script>
-		<script type="text/javascript">
-			$.typeahead({
-				input: '.js-typeahead',
-				order: "desc",
-				source: {
-					data: ["handlebars", "createconnection", "app", "form", "listening", "localhost", "module", "mysql", "orm", "params", "port", "query", "require", "response", "root", "route", "server", "update", "urlencoded"]
-				},
-				callback: {
-					onInit: function (node) {
-						console.log('Typeahead Initiated on ' + node.selector);
+		<script type="text/javascript" src="../public/js/custom.js"></script>
+		<script type="text/javascript" src="../public/js/index.js"></script>
+		<script type="text/javascript" src="../public/js/regular.js"></script>
+
+
+		<!--script for typing title-->
+		<script>
+			document.addEventListener('DOMContentLoaded', function (event) {
+				// array with texts to type in typewriter
+				var dataText = ["Boost your Bootcamp"];
+
+				// type one text in the typwriter
+				// keeps calling itself until the text is finished
+				function typeWriter(text, i, fnCallback) {
+					// chekc if text isn't finished yet
+					if (i < (text.length)) {
+						// add next character to h1
+						document.querySelector("h1").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+
+						// wait for a while and call this function again for next character
+						setTimeout(function () {
+							typeWriter(text, i + 1, fnCallback)
+						}, 100);
+					}
+					// text finished, call callback if there is a callback function
+					else if (typeof fnCallback == 'function') {
+						// call callback after timeout
+						setTimeout(fnCallback, 700);
 					}
 				}
+				// start a typewriter animation for a text in the dataText array
+				function StartTextAnimation(i) {
+					if (typeof dataText[i] == 'undefined') {
+						setTimeout(function () {
+							StartTextAnimation(0);
+						}, 20000);
+					}
+					// check if dataText[i] exists
+					if (i < dataText[i].length) {
+						// text exists! start typewriter animation
+						typeWriter(dataText[i], 0, function () {
+							// after callback (and whole text has been animated), start next text
+							StartTextAnimation(i + 1);
+						});
+					}
+				}
+				// start the text animation
+				StartTextAnimation(0);
 			});
-
 		</script>
-		<script src="js/index.js" type="text/javascript"></script>
 
-</body>
 
-</html>
+
+
+
+		<!--script for the google custom search api:: 
+			It can take up to 2-4 days for autocomplete to start 
+			appearing on your search engine. -->
+
+
+		<script>
+			(function () {
+				var cx = '010777012160272051316:d1-2zs1az4a';
+				var gcse = document.createElement('script');
+				gcse.type = 'text/javascript';
+				gcse.async = true;
+				gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(gcse, s);
+			})();
+
+			// 2. This code loads the IFrame Player API code asynchronously.
+			var tag = document.createElement('script');
+
+			tag.src = "https://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			// 3. This function creates an <iframe> (and YouTube player)
+			//    after the API code downloads.
+			var player;
+
+			function onYouTubeIframeAPIReady() {
+				player = new YT.Player('player', {
+					height: '390',
+					width: '640',
+					playerVars: {
+						listType: 'search',
+						list: 'mysql|sequelize',
+					},
+					events: {
+						'onReady': onPlayerReady,
+						'onStateChange': onPlayerStateChange
+					}
+				});
+			}
+
+			// 4. The API will call this function when the video player is ready.
+			function onPlayerReady(event) {
+				event.target.playVideo();
+			}
+
+			// 5. The API calls this function when the player's state changes.
+			//    The function indicates that when playing a video (state=1),
+			//    the player should play for six seconds and then stop.
+			var done = false;
+
+			function onPlayerStateChange(event) {
+				if (event.data == YT.PlayerState.PLAYING && !done) {
+					setTimeout(stopVideo, 6000);
+					done = true;
+				}
+			}
+
+			function stopVideo() {
+				player.stopVideo();
+			}
+		</script>
+
+
+
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				// Gets an optional query string from our url (i.e. ?post_id=23)
+				var url = window.location.search;
+				var postId;
+				// Sets a flag for whether or not we're updating a post to be false initially
+				var updating = false;
+
+				// If we have this section in our url, we pull out the post id from the url
+				// In localhost:8080/cms?post_id=1, postId is 1
+				if (url.indexOf("?post_id=") !== -1) {
+					postId = url.split("=")[1];
+					getPostData(postId);
+				}
+
+				// Getting jQuery references to the post body, title, form, and category select
+				var bodyInput = $("#body");
+				var titleInput = $("#title");
+				var cmsForm = $("#cms");
+				var postCategorySelect = $("#category");
+				// Giving the postCategorySelect a default value
+				postCategorySelect.val("Personal");
+				// Adding an event listener for when the form is submitted
+				$(cmsForm).on("submit", function handleFormSubmit(event) {
+					event.preventDefault();
+					// Wont submit the post if we are missing a body or a title
+					if (!titleInput.val().trim() || !bodyInput.val().trim()) {
+						return;
+					}
+					// Constructing a newPost object to hand to the database
+					var newPost = {
+						title: titleInput.val().trim(),
+						body: bodyInput.val().trim(),
+						category: postCategorySelect.val()
+					};
+
+					console.log(newPost);
+
+					// If we're updating a post run updatePost to update a post
+					// Otherwise run submitPost to create a whole new post
+					if (updating) {
+						newPost.id = postId;
+						updatePost(newPost);
+					} else {
+						submitPost(newPost);
+					}
+				});
+
+				// Submits a new post and brings user to blog page upon completion
+				function submitPost(Post) {
+					$.post("/api/posts/", Post, function () {
+						window.location.href = "/blog";
+					});
+				}
+
+				// Gets post data for a post if we're editing
+				function getPostData(id) {
+					$.get("/api/posts/" + id, function (data) {
+						if (data) {
+							// If this post exists, prefill our cms forms with its data
+							titleInput.val(data.title);
+							bodyInput.val(data.body);
+							postCategorySelect.val(data.category);
+							// If we have a post with this id, set a flag for us to know to update the post
+							// when we hit submit
+							updating = true;
+						}
+					});
+				}
+
+				// Update a given post, bring user to the blog page when done
+				function updatePost(post) {
+					$.ajax({
+							method: "PUT",
+							url: "/api/posts",
+							data: post
+						})
+						.then(function () {
+							window.location.href = "/blog";
+						});
+				}
+			});
+		</script>	
+		
+		
+		
+
+	</body>
+
+	</html>
