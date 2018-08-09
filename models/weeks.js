@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 module.exports = (sequelize, DataTypes) => {
   const weeks = sequelize.define('weeks', {
     id: {
@@ -30,3 +32,4 @@ module.exports = (sequelize, DataTypes) => {
   return weeks;
 
 };
+>>>>>>> ce3f05bb3ff083801bde21bd8cfecea738703e11
