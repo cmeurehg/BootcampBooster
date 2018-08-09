@@ -3,7 +3,7 @@
 	<html lang="en">
 
 	<head>
-		<title id="title"> Bootcamp Booster</title>
+		<title id="title"> Bootcamp Booster-test</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="Lingua project">
@@ -156,16 +156,10 @@
 						<a href="#">Home</a>
 					</li>
 					<li class="menu_mm">
-						<div class="dropdown">
-							<button class="dropbtn">Skill References
-								<i class="fa fa-caret-down"></i>
-							</button>
-							<div class="dropdown-content">
 								<a href="#personalskill">Personal database</a>
+								<br>
 								<a href="#searchtools">Public search tools</a>
-							</div>
-						</div>
-					</li>
+						</li>
 					<li class="menu_mm">
 						<a href="#developers">Developers</a>
 					</li>
@@ -268,7 +262,11 @@
 			<div class="row">
 				<div class="col">
 					<h2 class="section_title text-center">Personal Skills Database</h2>
-					<button>click here to go to personal skills</button>
+					<div id="iframeDisplay">
+						<iframe id="myIframe" src="../views/test.html" height="500px" width="1000px"target="myIframe" style:"backgroud:#ffffff">
+						  <p>This is my iframe
+						  </iframe>
+						</div>
 				</div>
 			</div>
 			<div class="container">
@@ -329,12 +327,12 @@
 				<p>Programming Video Playlist</p>
 				<div id="player"></div>
 				<div class="row">
-					<div class="col">
+					<!-- <div class="col">
 						<h2 class="section_title text-center">Productivity Links</h2>
 						<p class="text-center">Evernote</p>
 						<p class="text-center">GoConqr</p>
 						<p class="text-center">TomatoTimer</p>
-					</div>
+					</div> -->
 				</div>
 
 			</div>
@@ -434,7 +432,12 @@
 		<script type="text/javascript" src="../public/js/index.js"></script>
 		<script type="text/javascript" src="../public/js/regular.js"></script>
 
-
+<!--iframe for skills -->
+<script>
+	function displayIframe() {
+    document.getElementById("myIframe").innerHTML = "<iframe src=\"/Users/user/GitHub/BootcampBooster/views/test.html/views/test.html\" height=\"400\" width=\"300\" ></iframe>";
+}
+</script>
 		<!--script for typing title-->
 		<script>
 			document.addEventListener('DOMContentLoaded', function (event) {
