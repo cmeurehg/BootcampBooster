@@ -16,7 +16,7 @@ var app = express();
 //   // res.send('<h1>it works !</h1>')
 // });
 
-app.use('/', express.static(__dirname + '/views'));
+app.use('/', express.static(__dirname + '/public'));
 
 // Serve static content for the app from the "public" directory in the application directory.
 // app.use(express.static("public"));
