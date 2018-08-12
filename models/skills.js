@@ -1,27 +1,45 @@
-module.exports = (sequelize, DataTypes) => {
-  const skills = sequelize.define('skills', {
-    id: {
-      type: DataTypes.UUID,
-      primaryKey: true,
+ module.exports = function (sequelize, DataTypes) {
+  var skills = sequelize.define("skills", {
+   id: {
+      type: DataTypes.INTEGER,
+       primaryKey: true
+     },
+
+    weekNumber: {
+      type: DataTypes.INTEGER,
       allowNull: false
     },
-    
-    name: {
+
+    gitlabLink: {
       type: DataTypes.STRING,
-      required: true
+      allowNull: false
+    },
+
+    skill: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+
+    webReference: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
 
   });
-    
-    skills.associate = function(models) {
-   
-      skills.belongsTo(models.activity, {
-        foreignKey: {
+
+  skills.associate = function(models) {
+  
+    skills.belongsTo(models.activity, {
+      foreignKey: {
           allowNull: false
-        }
-      });
-    };
+      }
+
+    });
+
+  };
 
   return skills;
-
+ 
 };
+
+  
