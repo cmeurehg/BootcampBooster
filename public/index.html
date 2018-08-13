@@ -262,6 +262,11 @@
 		</div>-->
 
 		<!-- Enter skill information -->
+		<div id="iframeDisplay">
+			<iframe id="myIframe" src="../views/test.html" height="500px" width="1000px" target="myIframe" style: "backgroud:#ffffff">
+				<p>This is my iframe
+			</iframe>
+		</div>
 
 		<div class="register" id="personalskill">
 
@@ -298,7 +303,7 @@
 										<input type="text" class="form_input" id="skill" placeholder="Skill Reference">
 									</div>
 									<div class="col-lg-6 register_col">
-										<input type="text" class="form_input" placeholder="Website Reference">
+										<input type="text" class="form_input" id="webRef" placeholder="Website Reference">
 										<div class="col">
 											<button type="submit" class="form_button trans_200">submit</button>
 										</div>
@@ -433,6 +438,7 @@
 		<script type="text/javascript" src="../public/js/custom.js"></script>
 		<script type="text/javascript" src="../public/js/index.js"></script>
 		<script type="text/javascript" src="../public/js/regular.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
 
 
 		<!--script for typing title-->
@@ -479,6 +485,13 @@
 				// start the text animation
 				StartTextAnimation(0);
 			});
+		</script>
+
+		<!--iframe for skills -->
+		<script>
+			function displayIframe() {
+				document.getElementById("myIframe").innerHTML = "<iframe src=\"/Users/user/GitHub/BootcampBooster/views/test.html/views/test.html\" height=\"400\" width=\"300\" ></iframe>";
+			}
 		</script>
 
 

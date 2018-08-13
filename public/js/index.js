@@ -14,21 +14,21 @@ $(document).ready(function () {
   });
 
   // send an AJAX POST-request with jQuery
-  $.post("/api/new", newSkill)
-    // on success, run this callback
-    .then(function (data) {
-      // log the data we found
-      console.log(data);
-      // tell the user we're adding a character with an alert window
-      alert("Adding skill...");
-    });
+//   $.post("/api/new", newSkill)
+//     // on success, run this callback
+//     .then(function (data) {
+//       // log the data we found
+//       console.log(data);
+//       // tell the user we're adding a character with an alert window
+//       alert("Adding skill...");
+//     });
 
-  // empty each input box by replacing the value with an empty string
-  $("#weekNumber").val("");
-  $("#gitlabLink").val("");
-  $("#skill").val("");
-  $("#webReference").val("");
+//   // empty each input box by replacing the value with an empty string
+//   $("#weekNumber").val("");
+//   $("#gitlabLink").val("");
+//   $("#skill").val("");
+//   $("#webReference").val("");
   
-});
+// });
 
   
